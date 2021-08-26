@@ -9,5 +9,9 @@ public class Login extends User {
         this.loginNumber = loginNumber;
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString ()+ " Login no."+loginNumber+")";
+    }
 }
+

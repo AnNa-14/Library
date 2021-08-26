@@ -10,5 +10,8 @@ public class Registration extends User {
         this.numberRegistration = numberRegistration;
     }
 
-    
+    @Override
+    public String toString() {
+        return super.toString ()+" (Register no: "+numberRegistration+")";
+    }
 }

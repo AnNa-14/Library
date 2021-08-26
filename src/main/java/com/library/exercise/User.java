@@ -13,4 +13,8 @@ public abstract class User {
         this.email = email;
         this.password = password;
     }
+    @Override
+    public String toString() {
+        return firstName + " " + lastName;
+    }
 }
