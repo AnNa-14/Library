@@ -1,6 +1,8 @@
 package com.library.exercise;
 
-public abstract class User {
+import java.io.Serializable;
+
+public abstract class User implements Serializable {
 
     private String firstName;
     private String lastName;

@@ -1,9 +1,12 @@
 package com.library.exercise;
 
 
+import java.io.IOException;
+import java.util.List;
+
 public class ExerciseApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		Registration registration1 = new Registration ("Kasia","Kowalska",
 				"kasiak@gmail.com","123456l",3445L);
 		Registration registration2 = new Registration ("Tomek","Nowak",
@@ -16,11 +19,21 @@ public class ExerciseApplication {
 
 	//	System.out.println (registration1);;
 	//	System.out.println(registration2);
-	//	System.out.println(login1);
-	//	System.out.println(login2);
+
+		System.out.println(login1);
+		System.out.println(login2);
+
+		System.out.println("Dodano");
 
 		UserRepository userRepository = new FileUserRepository ();
-		userRepository.insert(login1);
+
+		//userRepository.insert(login1);
+		//userRepository.insert(login2);
+
+		List<User> users = userRepository.findAll ();
+
+		System.out.println("Lista");
+		System.out.println(users);
 
 
 	}
