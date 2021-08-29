@@ -36,7 +36,7 @@ public class FileUserRepository implements UserRepository{
             try (ObjectInputStream objectInputStream = new ObjectInputStream (fileInputStream)) {
                 Object object = objectInputStream.readObject ();
                 objectInputStream.close ();
-                fileInputStream.close ();
+                fileInputStream.close();
                 return (List<User>) object;
             }
 
@@ -52,5 +52,18 @@ public class FileUserRepository implements UserRepository{
 
         }
         return null;
+    }
+
+    @Override
+    public boolean existsByEmailAndPassword(String email, String password) {
+        List<User>users = findAll ();
+        for (User user: users){
+            if(user.getEmail ().equalsIgnoreCase (email)
+                && user.getPassword().equals(password)
+            );{
+                return true;
+            }
+        }
+        return false;
     }
 }
