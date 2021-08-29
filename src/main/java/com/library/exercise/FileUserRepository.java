@@ -39,13 +39,15 @@ public class FileUserRepository implements UserRepository{
 
         } catch (FileNotFoundException e) {
             e.printStackTrace ();
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
             e.printStackTrace ();
+        } catch (IOException ex) {
+            throw new RuntimeException (ex);
 
 
 
 
-    }
+        }
         return null;
     }
 }
