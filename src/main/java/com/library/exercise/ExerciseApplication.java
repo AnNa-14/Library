@@ -30,6 +30,9 @@ public class ExerciseApplication {
 
 		//userRepository.insert(login1);
 		//userRepository.insert(login2);
+		LoginView loginView = new LoginView ();
+		loginView.initialize ();
+
 
 		List<User> users = userRepository.findAll ();
 
