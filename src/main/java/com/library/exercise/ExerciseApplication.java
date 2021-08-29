@@ -14,10 +14,15 @@ public class ExerciseApplication {
 		Login login2 = new Login ("Adam", "Korona",
 				"akorona@gmail.com","ldsa5948",3549l );
 
-		System.out.println (registration1);;
-		System.out.println(registration2);
-		System.out.println(login1);
-		System.out.println(login2);
+	//	System.out.println (registration1);;
+	//	System.out.println(registration2);
+	//	System.out.println(login1);
+	//	System.out.println(login2);
+
+		UserRepository userRepository = new FileUserRepository ();
+		userRepository.insert(login1);
+
+
 	}
 
 }
