@@ -26,6 +26,7 @@ public class ExerciseApplication {
 		System.out.println("Dodano");
 
 		UserRepository userRepository = new FileUserRepository ();
+		userRepository.insert(registration1);
 
 		//userRepository.insert(login1);
 		//userRepository.insert(login2);

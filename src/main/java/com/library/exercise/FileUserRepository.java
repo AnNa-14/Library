@@ -35,12 +35,15 @@ public class FileUserRepository implements UserRepository{
             FileInputStream fileInputStream = new FileInputStream (FILENAME);
             try (ObjectInputStream objectInputStream = new ObjectInputStream (fileInputStream)) {
                 Object object = objectInputStream.readObject ();
+                objectInputStream.close ();
+                fileInputStream.close ();
+                return (List<User>) object;
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace ();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace ();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace ();
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace ();
         } catch (IOException ex) {
             throw new RuntimeException (ex);
 
