@@ -1,4 +1,4 @@
-package com.library.exercise;
+package com.library.exercise.domain;
 
 
 public class Login extends User {

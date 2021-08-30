@@ -1,4 +1,6 @@
-package com.library.exercise;
+package com.library.exercise.security;
+
+import com.library.exercise.domain.UserRepository;
 
 import java.util.Scanner;
 
@@ -25,7 +27,11 @@ public class LoginView {
         System.out.println ("Podaj hasło: ");
         String password = scanner.nextLine ();
         boolean result = userRepository.existsByEmailAndPassword (email, password);
-        System.out.println ("result ="+result);
+        if(!result){
+            System.out.println("Podane dane są nieprawidłowe. Spróbuj ponownie");
+            initialize ();
+        }
+
 
     }
 

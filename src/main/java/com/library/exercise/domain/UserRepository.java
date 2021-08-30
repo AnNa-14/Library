@@ -1,4 +1,4 @@
-package com.library.exercise;
+package com.library.exercise.domain;
 
 import java.io.IOException;
 import java.util.List;
