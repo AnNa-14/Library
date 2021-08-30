@@ -31,10 +31,10 @@ public class ExerciseApplication {
 
 		//userRepository = new FileUserRepository ();
 		//userRepository.insert (registration1);
-UserRepository userRepository = new FileUserRepository ();
+		userRepository = new FileUserRepository ();
 		//userRepository.insert(login1);
 		//userRepository.insert(login2);
-		LoginView loginView = new LoginView ();
+		loginView = new LoginView();
 		loginView.initialize ();
 
 

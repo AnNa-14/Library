@@ -10,6 +10,11 @@ public class LoginView {
     public LoginView(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
+
+    public LoginView() {
+
+    }
+
     public void initialize(){
 
         System.out.println ();
@@ -19,7 +24,7 @@ public class LoginView {
         String email = scanner.nextLine ();
         System.out.println ("Podaj hasło: ");
         String password = scanner.nextLine ();
-        boolean result userRepository.existsByEmailAndPassword (email, password);
+        boolean result = userRepository.existsByEmailAndPassword (email, password);
         System.out.println ("result ="+result);
 
     }
